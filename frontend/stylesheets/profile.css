@@ -1,0 +1,159 @@
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    
+}
+#main{
+    min-height:100vh;
+    background-color:#fffbea;
+    color:#444;
+    padding:20px;
+    
+}
+.head{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head form{
+    border:none;
+}
+.head form button{
+    color:white;
+    background-color: #dc2626;
+    padding:10px 20px;
+    border-radius:5px;
+    border:none;
+
+}
+h1{
+    margin-bottom: 5vh;
+}
+form {
+    max-width: 500px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .formGroup input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+h3{
+    margin-top: 20px;
+}
+.postContainer{
+    
+    display: flex;
+    gap:20px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+.post{
+    background-color:#D8BFD8;
+    width:22vw;
+    margin-top:10px;
+    font-size:20px;
+    padding:10px;
+    color:#333;
+    display:flex;
+    flex-direction:column;
+    align-items:space-between;
+    justify-content:center;
+    gap:10px;
+}
+.post .info{
+    display:flex;
+    align-items:center;   
+}
+.post .info h4:first-child{
+    color:#555;
+}
+.post img{
+    width:20vw;
+    height:20vw;
+}
+.post .buttons{
+    /* background-color: red; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* padding:0 20px; */
+    gap:20px;
+}
+.post .buttons a{
+    padding:10px 20px;
+    border-radius:5px;
+    color:white;
+    text-decoration: none;
+    font-size:16px;
+}
+.post .buttons a:first-child{
+    background-color: #04a219;
+}
+.post .buttons a:last-child{
+    background-color: #dc2626;
+}
+
+@media screen and (max-width: 590px) {
+    #main {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+  
+    form {
+      max-width: 100%;
+      margin: 0 auto; 
+    }
+  
+    .postContainer {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .post {
+      max-width: 100%;
+    }
+  
+    .post img {
+      max-width: 100%;
+      max-height: auto;
+    }
+    
+    .post .buttons {
+      padding:5px 10px; /* Add spacing between buttons */
+    }
+  }
+  

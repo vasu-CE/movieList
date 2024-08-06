@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/update.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Update</h1>
+    <form action="/profile/update/<%= movie._id%>" method="post" enctype="multipart/form-data">
+        <label for="old">Old name : </label>
+        <input type="text" id="old" placeholder="<%= movie.title%>" name="oldName" disabled>
+        <label for="update">New name : </label>
+        <input type="text" id="update" placeholder="new name" name="updatedName">
+        <input type="file" name="image" placeholder="Image">
+        <input type="submit" value="Update">
+    </form>
+    </div>
+</body>
+</html>

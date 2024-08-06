@@ -1,0 +1,51 @@
+<!-- <% include('./header') %> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <div id="main">
+      <div class="head">
+        <h1>Hello, <%= user.name %> 👋</h1>
+        <form method="post" action="/user/logout">
+          <button type="submit">Logout</button>
+        </form>
+      </div>
+    <form id="#add" action="/profile/add" method="post" enctype="multipart/form-data">
+      <div class="formGroup">
+        <label for="image">Upload the image : </label>
+        <input id="image" type="file" name="image" placeholder="Image">
+      </div>
+      <div class="formGroup">
+        <label for="title">Movie title : </label>
+        <input id="title" type="text" placeholder="Enter title" name="title">
+      </div>
+      
+      <input type="submit" value="Create new Post" />
+    </form>
+    
+    <h3>Your Movie</h3>
+      <div class="postContainer">      
+        <% user.movies.forEach((movie) => { %>
+          <div class="post">
+            <div class="top">
+              <div class="info">
+                <h4>Title : </h4>
+              <h4 class="title"><%= movie.title %></h4>
+              </div>
+              <img src="data:image/jpeg;base64,<%= movie.image.toString('base64') %>" alt="">
+            </div>
+            <div class="buttons">
+              <a href="/profile/update/<%= movie._id %>">Edit</a>
+              <a href="/profile/delete/<%= movie._id%>">Delete</a>
+            </div>
+          </div>
+          <% }) %>
+      </div>
+    
+</body>
+</html>
